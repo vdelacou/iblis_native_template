@@ -7,7 +7,8 @@
     "test": "jest",
     "tsc": "tsc",
     "lint": "tslint src/**/*.ts* --project tsconfig.json",
-    "precommit": "lint"
+    "precommit": "npm run lint",
+    "prepush": "npm run lint"
   },
   "dependencies": {
     "react": "16.6.3",
@@ -19,6 +20,7 @@
     "@types/react-native": "^0.57.27",
     "@types/react-test-renderer": "^16.0.3",
     "babel-jest": "23.6.0",
+    "husky": "^1.3.1",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.51.1",
     "react-test-renderer": "16.6.3",
