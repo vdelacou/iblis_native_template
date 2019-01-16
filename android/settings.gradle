@@ -1,0 +1,3 @@
+rootProject.name = 'iblis_native_template'
+
+include ':app'
