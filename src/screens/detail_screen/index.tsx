@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Alert, StyleSheet, Text, View } from "react-native";
+import { AdMobInterstitial } from "react-native-admob";
 import { NavigationScreenProps } from "react-navigation";
 
 /**
@@ -7,6 +8,14 @@ import { NavigationScreenProps } from "react-navigation";
  */
 export class DetailScreen extends PureComponent<NavigationScreenProps> {
   render() {
+    AdMobInterstitial.setAdUnitID("ca-app-pub-3940256099942544/1033173712");
+    AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
+    AdMobInterstitial.requestAd().then(
+      () => AdMobInterstitial.showAd(),
+      (error: { code: string; error: string }) =>
+        Alert.alert(JSON.stringify(error))
+    );
+
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Details Screen</Text>
