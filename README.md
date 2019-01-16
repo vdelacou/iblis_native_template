@@ -24,8 +24,8 @@ Install and follow [instructions](https://facebook.github.io/react-native/docs/g
 
 Clone the repo
 `npm install`
-`sreact-native run-android`
-`sreact-native run-ios`
+`react-native run-android`
+`react-native run-ios`
 
 ## Contribute
 
