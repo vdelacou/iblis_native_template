@@ -6,6 +6,8 @@ Repository for this medium article: [Add React-navigation to React-Native Typesc
 
 Please read the article if you have any questions
 
+![Screenshot](https://cdn-images-1.medium.com/max/800/1*whhaTZGODXwyyeK_vQ_fpg.gif)
+
 ## Why
 
 Explain
