@@ -4,6 +4,7 @@
     "tslint-config-standard",
     "tslint-etc",
     "tslint-react",
+    "tslint-react-hooks",
     "tslint-config-prettier"
   ],
   "rules": {
@@ -53,9 +54,7 @@
     "newline-before-return": true,
     "match-default-export-name": true,
     "no-parameter-reassignment": true,
-    "file-name-casing": {
-      "options": ["kebab-case"]
-    },
+    "file-name-casing": [true, "kebab-case"],
     "switch-default": true,
     // tslint:recommended overrides
     "no-any": true,
@@ -67,7 +66,6 @@
     // tslint:tslint-config-standard overrides
     //
     // tslint-etc rules
-    "no-unused-declaration": true,
     "no-missing-dollar-expect": true,
     "no-assign-mutated-array": true,
     // tslint-react rules

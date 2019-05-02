@@ -1,11 +1,8 @@
-import React, { Component } from "react";
+import React, { FC } from "react";
 import AppContainer from "./routes";
 
-/**
- * Main App
- */
-export class App extends Component<{}> {
-  render() {
-    return <AppContainer />;
-  }
-}
+const App: FC = () => {
+  return <AppContainer />;
+};
+
+export default App;

@@ -1,7 +1,8 @@
-import React, { PureComponent } from "react";
-import { GestureResponderEvent, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import {
+  NavigationScreenComponent,
   NavigationScreenProps,
   NavigationStackScreenOptions
 } from "react-navigation";
@@ -10,41 +11,39 @@ import { ROUTES } from "../../routes";
 /**
  * The Modal screen
  */
-export class ModalScreen extends PureComponent<NavigationScreenProps> {
-  // screen navigation options
-  static navigationOptions = (
-    screenProps: NavigationScreenProps
-  ): NavigationStackScreenOptions => {
-    // Close Modal
-    const _buttonleftPress = (event: GestureResponderEvent) => {
-      screenProps.navigation.navigate(ROUTES.RootMain);
-    };
+export const ModalScreen: NavigationScreenComponent<{}> = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Modal Screen</Text>
+    </View>
+  );
+};
 
-    return {
-      headerStyle: {
-        elevation: 0,
-        backgroundColor: "#F5FCFF"
-      },
-      headerLeft: (
-        <Icon.Button
-          name="close"
-          backgroundColor="transparent"
-          underlayColor="transparent"
-          color="black"
-          onPress={_buttonleftPress}
-        />
-      )
-    };
+// screen navigation options
+ModalScreen.navigationOptions = (
+  screenProps: NavigationScreenProps
+): NavigationStackScreenOptions => {
+  // Close Modal
+  const buttonleftPress = () => {
+    screenProps.navigation.navigate(ROUTES.RootMain);
   };
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.title}>Modal Screen</Text>
-      </View>
-    );
-  }
-}
+  return {
+    headerStyle: {
+      elevation: 0,
+      backgroundColor: "#F5FCFF"
+    },
+    headerLeft: (
+      <Icon.Button
+        name="close"
+        backgroundColor="transparent"
+        underlayColor="transparent"
+        color="black"
+        onPress={buttonleftPress}
+      />
+    )
+  };
+};
 
 const styles = StyleSheet.create({
   container: {

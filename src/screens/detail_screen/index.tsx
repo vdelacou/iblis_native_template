@@ -1,19 +1,16 @@
-import React, { PureComponent } from "react";
+import React, { FC } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { NavigationScreenProps } from "react-navigation";
 
 /**
  * The Details screen
  */
-export class DetailScreen extends PureComponent<NavigationScreenProps> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.title}>Details Screen</Text>
-      </View>
-    );
-  }
-}
+export const DetailScreen: FC<{}> = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Details Screen</Text>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {

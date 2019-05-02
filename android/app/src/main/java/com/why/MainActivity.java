@@ -1,4 +1,4 @@
-package com.iblis_native_template;
+package com.why;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "iblis_native_template";
+        return "why";
     }
 }

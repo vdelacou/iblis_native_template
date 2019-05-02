@@ -1,0 +1,23 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "typescript.format.enable": false,
+  "javascript.format.enable": false,
+  "typescript.implementationsCodeLens.enabled": true,
+  "editor.trimAutoWhitespace": true,
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "files.autoSave": "afterDelay",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.vscode": true,
+    "**/build": true
+  },
+  "git.autofetch": true
+}
